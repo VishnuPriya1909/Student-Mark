@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarkSheet update...</title>
+    <link href="../public/css/Mark_Update.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <div  class="wrapper">
+        <h2>Mark Entry</h2>
+        <form method="POST" action="/mark" >
+            <h4>Student Details</h4>
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="text"   placeholder="Name" required class="name" name="Name">
+                    <i class="fa fa-user icon" aria-hidden="true"></i>
+                </div>
+                 <div class="input-box">
+                        <input type="text" placeholder="Roll No" name="rollno" class="name"required>
+                        <i class="fa fa-id-badge icon" aria-hidden="true"></i>
+                    </div>
+            </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <input type="email" placeholder="EmailAddress" required class="name"  name="Email">
+                        <i class="fa fa-envelope icon" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <h4>Date of Exam</h4>
+                        <select name="day" class="dob">
+                            <option disabled hidden selected> Choose Day</option>
+                            <% user.forEach(function(result){ %>
+                                <option value="<%= result.day %>"><%=result.day %></option>
+                           <% }) %>
+                        </select>
+                        <select name="mon" class="dob">
+                            <option disabled hidden selected> Choose month</option>
+                            <% user.forEach(function(result){ %>
+                                <% if(result.mon!=null){ %>
+                                <option value="<%= result.mon %>"><%=result.mon %></option>
+                                <% } %>
+                           <% }) %>
+                        </select>
+                        <select name="yr" class="dob">
+                            <option disabled hidden selected> Choose Year</option>
+                            <% user.forEach(function(result){ %>
+                                <% if(result.year!=null){ %>
+                                    <option value="<%= result.year %>"><%=result.year%></option>
+                                    <% } %>
+                               <% }) %>
+                        </select>
+                    </div>
+                    </div>
+                    <div class="input-group">
+                          <div class="input-box">
+                          
+                          <select name="Dep" class="dep">
+                              <option disabled hidden selected>
+                              Choose Department
+                             </option>
+                             <% user.forEach(function(result){ %>
+                                <% if(result.Department!=null){ %>
+                                    <option value="<%= result.Department %>"> <%= result.Department %></option>
+                                    <% } %>
+                               <% }) %>
+                        </select>
+                         </div>
+                </div>
+                  
+                <div class="input-group">
+                    <div class="input-box">
+                        <h4>Mark Details</h4>
+                    </div>
+                    <div class="input-box">
+                     <input type="text" placeholder="Mark 1" class="name" name="mark1">
+                     <i class="fa fa-graduation-cap icon" aria-hidden="true"></i>
+                    </div>
+                   
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <input type="text" placeholder="Mark 2" class="name" name="mark2">
+                        <i class="fa fa-graduation-cap icon" aria-hidden="true"></i> 
+                    </div>
+                       <div class="input-box">
+                        <input type="text" placeholder="Mark 3" class="name" name="mark3">
+                        <i class="fa fa-graduation-cap icon" aria-hidden="true"></i>   
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <button type="submit">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+        </form>
+    </div>
+</body>
+</html>

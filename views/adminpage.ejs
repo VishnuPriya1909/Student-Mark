@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <title>Admin</title>
+        <link rel=stylesheet href="../public/css/adminpage.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>
+    <body onload="myFunction()">
+         <div class="loader">
+            
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span> 
+            <small>Please Wait While Loading....</small>
+         </div>
+         <section>
+         <div class="box" style="display: none;" id="myDiv" >
+             <div class="circle">
+          <h1>Admin</h1>
+      <a href=/adminlogin><button class="login">Login</button></a>
+      <button class="signup" id="myBtn">Sign up</button>
+      <div id="myModal" class="modal">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <span class="close">&times;
+                  </span>
+                  <header>Sign Up Form</header>
+                  <div class="progress-bar">
+                      <div class="step">
+                          <p>Name</p>
+                          <div class="bullet">
+                              <span>1</span>
+                          </div>
+                          <div class="check fas fa-check"></div>
+                      </div>
+                      <div class="step">
+                        <p>Contact info</p>
+                        <div class="bullet">
+                            <span>2</span>
+                        </div>
+                        <div class="check fas fa-check"></div>
+                    </div>
+                      <div class="step">
+                        <p>DOB</p>
+                        <div class="bullet">
+                            <span>3</span>
+                        </div>
+                        <div class="check fas fa-check"></div>
+                      </div>
+                      <div class="step">
+                        <p>Name</p>
+                        <div class="bullet">
+                            <span>4</span>
+                        </div>
+                        <div class="check fas fa-check"></div>
+                    </div>
+                      </div>
+                  </div>
+              <div class="modal-body">
+                  <div class="form-outer">
+                      <form method="post" action="">
+                          <div class="page slidepage">
+                              <div class="title">Basic Info:</div>
+                              <div class="field">
+                                  <div class="label">Name</div>
+                                  <input type="text" name="admin_Name" id="admin_Name" required>
+                              </div>
+                              <div class="field">
+                                <div class="label">Faculty Id</div>
+                                <input type="text" name="admin_id" id="admin_id" required>
+                            </div>
+                            <div class="field nextBtn">
+                                <button id="nextBtn">Next</button>
+                            </div>
+                          </div>
+                          <div class="page">
+                              <div class="title">Contact Info</div>
+                              <div class="field">
+                                <div class="label">Phnne Number</div>
+                                <input type="number">
+                            </div>
+                              <div class="field">
+                                  <div class="label">Phone Number</div>
+                                  <input type="number">
+                              </div>
+                              <div class="field btns">
+                                  <button class="prev-1 prev">Previous</button>
+                                  <button class="next-1 next">Next</button>
+                              </div>
+                          </div>
+                          <div class="page">
+                            <div class="title">Date of Birth</div>
+                            <div class="field">
+                              <div class="label">Date</div>
+                              <input type="text">
+                          </div>
+                            <div class="field">
+                                <div class="label">Gender</div>
+                                <select>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+                            <div class="field btns">
+                                <button class="prev-2 prev">Previous</button>
+                                <button class="next-2 next">Next</button>
+                            </div>
+                        </div>
+                        <div class="page">
+                            <div class="title">Login Details</div>
+                            <div class="field">
+                              <div class="label">User Name</div>
+                              <input type="number">
+                          </div>
+                            <div class="field">
+                                <div class="label">Password</div>
+                                <input type="password">
+                            </div>
+                            <div class="field btns">
+                                <button class="prev-3 prev">Previous</button>
+                                <button class="submit next">Submit</button>
+                            </div>
+                        </div>
+                      </form>
+                  </div>
+              </div>
+              </div>
+              <!-- <div class="modal-footer">
+                  <h3>Modal Footer</h3>
+              </div> -->
+          </div>
+          </div>
+          </div>
+      </div>
+     </div>
+     </div>
+     </section>
+     <script src="../public/js/adminpage.js"> </script>
+    </body>
+</html>
